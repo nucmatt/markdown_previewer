@@ -1,13 +1,14 @@
 import React from 'react';
 
-export const Editor = () => {
+export const Editor = (props) => {
+   
 	return (
 		<textarea
 			name=''
 			id='editor'
 			cols='30'
 			rows='10'
-			defaultValue='markdown goes here.'
+			defaultValue={props.input}
 		></textarea>
 	);
 };
