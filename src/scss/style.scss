@@ -76,6 +76,12 @@ table {
 	}
 }
 
+#preview {
+	margin: 2rem auto;
+	overflow: hidden;
+	padding: 0 2rem;
+}
+
 @import 'utilities';
 @import 'buttons';
 @import 'text-styles';

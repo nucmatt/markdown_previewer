@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import marked from 'marked';
 import Previewer from './components/Previewer';
-import Editor from './components/Editor';
+// import Editor from './components/Editor';
 import './scss/style.scss';
 
 function App() {
@@ -9,10 +9,23 @@ function App() {
     headerIds: false,
   });
   const defaultMarkdown = '# This is an H1 tag in markdown.'
-  const convertedMarkdown = marked(defaultMarkdown);
+  
+  const [markdown, setMarkdown] = useState(defaultMarkdown);
+  const handleInput = (e) => {
+    setMarkdown(e.target.value);
+  }
+  const convertedMarkdown = marked(markdown);
+
 	return (
-		<main className='container grid-2-3 bg-dark'>
-			<Editor input={defaultMarkdown}/>
+		<main className='container grid-2-3 bg-primary'>
+			{/* <Editor input={defaultMarkdown}/> */}
+      <textarea
+			name=''
+      id='editor'
+      className='form-container'
+      defaultValue={markdown}
+      onChange={handleInput}
+		></textarea>
 			<Previewer markdown={convertedMarkdown}/>
 		</main>
 	);
