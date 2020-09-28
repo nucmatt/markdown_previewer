@@ -9,7 +9,6 @@
 	width: 100%;
 	border-bottom: solid 1px $primary-color;
 	opacity: 0.9;
-	margin-bottom: 1rem;
 
 	ul {
 		display: flex;
@@ -17,6 +16,7 @@
 
 	a {
 		color: $light-text-color;
+		padding-right: 1rem;
 
 		&:hover {
 			color: $light-color;
