@@ -4,7 +4,7 @@ export const Previewer = (props) => {
 	return (
 		<div
             id='preview'
-            className='bg-light'
+			className='bg-light m'
 			dangerouslySetInnerHTML={{ __html: props.markdown }}
 		></div>
 	);
