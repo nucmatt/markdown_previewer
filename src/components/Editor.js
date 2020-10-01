@@ -28,7 +28,20 @@ And unordered lists:
 - First item
 - Second item
 - Third item\n
-You can **bold** text.`;
+You can **bold** text.\n
+You can *italicize* text.\n
+***Or both!***
+> There are block quotes.\n
+> Here is a block quote...
+>
+> Across multiple lines!
+>> With a nested blockquote as well!\n
+> #### You can even combine markdown syntaxes like headers.
+> - With lists
+> - **And text styling**\n
+Last but not least... 
+![puppy pic!](https://cdn.pixabay.com/photo/2016/03/09/15/21/dog-1246610_960_720.jpg)
+puppy images!`;
 
 	const [markdown, setMarkdown] = useState(defaultMarkdown);
 	const handleInput = (e) => {
@@ -36,7 +49,7 @@ You can **bold** text.`;
 	};
 	const convertedMarkdown = marked(markdown);
 	return (
-		<main className='grid-2-3 bg-dark'>
+		<main className='grid-2-3 bg-success'>
 			<textarea
 				name=''
 				id='editor'
@@ -46,7 +59,6 @@ You can **bold** text.`;
 			></textarea>
 			<Previewer markdown={convertedMarkdown} />
 		</main>
-		// <textarea name='' id='editor' defaultValue={props.input}></textarea>;
 	);
 };
 

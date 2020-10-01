@@ -1,11 +1,12 @@
 /* General Utility Classes */
 
 .container {
+	min-width: 650px;
 	max-width: 1100px;
 	min-height: 100vh;
 	margin: auto;
 	overflow: hidden;
-	padding: 0 2rem;
+	padding: none;
 }
 
 .card {

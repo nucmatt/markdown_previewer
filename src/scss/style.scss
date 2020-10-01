@@ -78,12 +78,16 @@ table {
 
 #editor {
 	font-size: small;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
 }
 
 #preview {
 	overflow: hidden;
 	word-wrap: break-word;
 	padding-left: 0.5rem;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
 
 	ol li {
 		display: list-item;
@@ -94,6 +98,19 @@ table {
 		display: list-item;
 		list-style: inside square;
 	}
+
+	blockquote {
+		display: block;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 40px;
+		margin-right: 40px;
+	  }
+
+	  img {
+		  height: 150px;
+		  width: 150px;
+	  }
 }
 
 @import 'utilities';
